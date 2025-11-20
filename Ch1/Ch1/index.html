@@ -1,0 +1,1113 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="R_matrix">
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../Ch2/Ch2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Preliminaries to Complex Analysis - 复分析习题</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/math_env.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/note_block.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter1-preliminaries-to-complex-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="复分析习题" class="md-header__button md-logo" aria-label="复分析习题" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            复分析习题
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preliminaries to Complex Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  第一章
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ch2/Ch2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  第二章
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="复分析习题" class="md-nav__button md-logo" aria-label="复分析习题" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    复分析习题
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    首页
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第一章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries to Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preliminaries to Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        作业题节选
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第二章
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ch2/Ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cauchy's Theorem and Its Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        作业题节选
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter1-preliminaries-to-complex-analysis">Chapter1 - Preliminaries to Complex Analysis</h1>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>The sweeping  development of mathematics during the last two centuries is due in large part to the inductionn of complex numbers; paradoxically, this is based on the seemingly absurd notion that three are numbers whose squares are negative.</p>
+<p>-- <span class="arithmatex">\(E. Borel\, , 1952\)</span></p>
+</div>
+<h2 id="context">Context</h2>
+<p>对应 <code>复变函数简明教程</code> Ch1, Ch2, Ch3 的内容.
+主要有 <code>复数和复平面的基本性质</code> , <code>解析函数的 C-R 方程</code> , <code>幂级数展开</code> , <code>分式线性变换</code> , <code>简单曲线上的积分</code></p>
+<h2 id="exercise">Exercise</h2>
+<blockquote>
+<p><strong>练习1</strong> <code>(From Stein Ch1 ET4)</code> Show that it is impossible to define a total ordering on C. In other words, one cannot find a relation <span class="arithmatex">\(\prec\)</span> between complex numbers so that:</p>
+<ol>
+<li>
+<p>For any two complex numbers z, w, one and only one of the following is true : <span class="arithmatex">\(z \prec w\)</span>, <span class="arithmatex">\(w\prec z\)</span> or <span class="arithmatex">\(z = w\)</span>.</p>
+</li>
+<li>
+<p>For all <span class="arithmatex">\(z_1, z_2, z_3 \in \mathbb{C}\)</span> the relation <span class="arithmatex">\(z_1 \prec z_2\)</span> implies <span class="arithmatex">\(z_1 + z_3 \prec z_2 + z_3\)</span>.</p>
+</li>
+<li>
+<p>Moreover, for all <span class="arithmatex">\(z_1, z_2, z_3 \in \mathrm{C}\)</span> with <span class="arithmatex">\(0 \prec z_3\)</span>, then <span class="arithmatex">\(z_1 \prec z_2\)</span> implies <span class="arithmatex">\(z_1z_3 \prec z_2z_3\)</span>.</p>
+</li>
+</ol>
+<p>[Hint: First check if <span class="arithmatex">\(0 \prec i\)</span> is possible.]</p>
+</blockquote>
+<p><strong>解答</strong> :
+不妨设 <span class="arithmatex">\(0 \prec i\)</span> , 那么 <span class="arithmatex">\(0 \cdot i \prec i \cdot i\)</span>, 即 <span class="arithmatex">\(0 \prec -i\)</span>, 两边加 <span class="arithmatex">\(i\)</span>, 有 <span class="arithmatex">\(i \prec 0\)</span>, 矛盾! <span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习2</strong> <code>(From Stein Ch1 ET8)</code> Suppose <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are open set in complex plane. Prove that if <span class="arithmatex">\(f : U \to V\)</span> and <span class="arithmatex">\(g : V \to \mathbb{C}\)</span> are two functions that are difficrentable (in the real sense, that is, as functions of the two real variables <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>), and <span class="arithmatex">\(h = g \circ f\)</span>, then</p>
+<div class="arithmatex">\[ \frac{\partial h}{\partial z} = \frac {\partial g}{\partial z} \frac{\partial f}{\partial z} + \frac{\partial g}{\partial \bar z} \frac{\partial \bar f}{\partial z}\]</div>
+<p>and </p>
+<div class="arithmatex">\[ \frac{\partial h}{\partial \bar z} = \frac {\partial g}{\partial z} \frac{\partial f}{\partial \bar z} + \frac{\partial g}{\partial \bar z} \frac{\partial \bar f}{\partial \bar z}\]</div>
+<p>This is the complex version of the chain rule.</p>
+</blockquote>
+<p><strong>证明</strong> :
+直接把 <span class="arithmatex">\(f\)</span> 写成 <span class="arithmatex">\(w = f(z, \bar z)\)</span> 的形式 , 再令 <span class="arithmatex">\(g(f) = g(f, \bar f)\)</span>, 于是 <span class="arithmatex">\(g \circ f\)</span> 变为</p>
+<div class="arithmatex">\[h(z, \bar z) = g(w, \bar w) = g(f(z, \bar z), \bar f (z, \bar z)).\]</div>
+<p>那么</p>
+<div class="arithmatex">\[\frac{\partial h}{\partial z} = g_ww_z + g_{\bar w}\bar w_z = g_zf_z + g_{\bar z}\bar f_z \]</div>
+<div class="arithmatex">\[\frac{\partial h}{\partial \bar z} = g_ww_{\bar z} + g_{\bar w}\bar w_{\bar z} = g_zf_{\bar z} + g_{\bar z}\bar f_\bar z \]</div>
+<p><span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习3</strong> <code>(From Stein Ch1 ET9)</code> Show that in polar coordonates, the Cauchy-Riemann equations take the form</p>
+<div class="arithmatex">\[\frac{\partial u}{\partial r} = \frac 1r \frac{\partial v}{\partial \theta} \qquad \text{and} \qquad  \frac 1r \frac{\partial u}{\partial \theta} = - \frac{\partial v}{\partial r}\]</div>
+</blockquote>
+<p><strong>证明</strong> :
+设 <span class="arithmatex">\(x = r\cos \theta, y = r \sin \theta\)</span>, 那么</p>
+<div class="arithmatex">\[\frac{\partial}{\partial r} = \frac{\partial}{\partial x}\cos \theta + \frac{\partial}{\partial y}\sin \theta ,  \quad \frac{\partial}{\partial \theta} = - r \frac{\partial}{\partial x}\sin \theta + r\frac{\partial}{\partial y}\cos \theta.\]</div>
+<p>带入 C-R 方程化简即得. <span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<hr />
+<p><strong>Remark</strong> : <font color = "rgba(2888, 100, 255)"> 若将 $f(x, y) $ 写成 $ R e^{i \Theta}$ 的形式 </font>
+设 <span class="arithmatex">\(f (z) = u(x, y) + i v(x, y) = R(x, y) \exp(i \Theta(x, y))\)</span>, 也即</p>
+<div class="arithmatex">\[u = R\cos \Theta, \qquad v = R\sin \Theta\]</div>
+<p>从而,</p>
+<div class="arithmatex">\[\frac{\partial u}{\partial x} = \frac{\partial R}{\partial x}\cos \Theta - r\frac{\partial \Theta}{\partial x}\sin \Theta\quad, \qquad \frac{\partial u}{\partial y} = \frac{\partial R}{\partial y}\cos \Theta - R\frac{\partial \Theta}{\partial y}\sin \Theta \]</div>
+<p>和</p>
+<div class="arithmatex">\[
+ \frac{\partial v}{\partial x} = \frac{\partial R}{\partial x}\sin \Theta + R\frac{\partial \Theta}{\partial x}\cos \Theta \quad, \qquad \frac{\partial v}{\partial y} = \frac{\partial R}{\partial y}\sin \Theta + R\frac{\partial \Theta}{\partial y} \cos \Theta
+\]</div>
+<p>由 Cauchy-Riemann 方程, 得</p>
+<div class="arithmatex">\[\frac{\partial R}{\partial x}\cos \Theta - R\frac{\partial \Theta}{\partial x}\sin \Theta = \frac{\partial R}{\partial y}\sin \Theta + R\frac{\partial \Theta}{\partial y}\cos \Theta\]</div>
+<div class="arithmatex">\[\frac{\partial R}{\partial y}\cos \Theta - R\frac{\partial \Theta}{\partial y}\sin \Theta = -\left(\frac{\partial R}{\partial x}\sin \Theta + R\frac{\partial \Theta}{\partial x}\cos \Theta\right)\]</div>
+<p>整理得方程组</p>
+<div class="arithmatex">\[\begin{pmatrix}
+    R_x - R\Theta_y &amp; -R_y - R\Theta_x\\
+    R_y + R\Theta_x &amp; R_x - R\Theta_y
+\end{pmatrix} \begin{pmatrix}\cos \Theta \\ \sin \Theta\end{pmatrix} = 0\]</div>
+<ol>
+<li>若 <span class="arithmatex">\((\cos \Theta \quad \sin \Theta)^T = 0\)</span>, 那么 <span class="arithmatex">\(\cos \Theta = \sin \Theta = 0\)</span>, 这与恒等式 <span class="arithmatex">\(\cos ^ 2 \Theta + \sin ^ 2 \Theta = 1\)</span> 矛盾!</li>
+<li>若 <span class="arithmatex">\((\cos \Theta \quad \sin \Theta)^T \ne 0\)</span>, 则左边的系数矩阵不可逆, 行列式为 0, 得到</li>
+</ol>
+<div class="arithmatex">\[(R_x - R\Theta_y)^2 + (R_y + R\Theta_x)^2 = 0.\]</div>
+<p>因此 <span class="arithmatex">\(R_x = R\Theta_y, \: R_y = -R\Theta_x\)</span>. <span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<hr />
+<blockquote>
+<p><strong>练习4</strong> <code>(From Stein Ch1 ET12)</code> Consider the function defined by</p>
+<div class="arithmatex">\[f(x + iy) = \sqrt{|x||y|}, \quad \text{whenever} \:\: x, y \in \mathbb{R}.\]</div>
+<p>Show that <span class="arithmatex">\(f\)</span> is satisfies the Cauchy-Riemann equtions at the origin, yet <span class="arithmatex">\(f\)</span> is not <abbr title="全纯的, 全纯函数">holomorphic</abbr> at 0.</p>
+</blockquote>
+<p><strong>证明</strong> :
+计算得</p>
+<div class="arithmatex">\[\frac{\partial u}{\partial x} =
+\begin{cases}
+    \frac 12 \sqrt{\frac{|y|}{|x|}} &amp;, x &gt; 0\\
+    -\frac 12 \sqrt{\frac{|y|}{|x|}} &amp;,  x &lt; 0\\
+    0 &amp;, x = 0, y= 0\\
+    \text{不存在} &amp;, x = 0, y \ne 0
+\end{cases}
+\]</div>
+<div class="arithmatex">\[\frac{\partial u}{\partial y} =
+\begin{cases}
+    \frac 12 \sqrt{\frac{|x|}{|y|}} &amp;, y &gt; 0\\
+    -\frac 12 \sqrt{\frac{|x|}{|y|}} &amp;,  y &lt; 0\\
+    0 &amp;, x = 0, y= 0\\
+    \text{不存在} &amp;, x \ne 0, y = 0
+\end{cases}
+\]</div>
+<div class="arithmatex">\[\frac{\partial v}{\partial x} = \frac{\partial v}{y} = 0\]</div>
+<p>从而 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\((0, 0)\)</span> 处满足 C-R 方程, 但是显然不解析.<span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习5</strong> <code>(From Stein Ch1 ET13)</code> Suppose that <span class="arithmatex">\(f\)</span> is <abbr title="全纯的, 全纯函数">holomorphic</abbr> in an opan set <span class="arithmatex">\(\Omega\)</span>. Prove that in any one of the following cases :</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathrm{Re}f\)</span> is constant;</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathrm{Im}f\)</span> is constant;</p>
+</li>
+<li>
+<p><span class="arithmatex">\(|f|\)</span> is constant;</p>
+</li>
+</ol>
+<p>one can conclude that <span class="arithmatex">\(f\)</span> is contstant.</p>
+</blockquote>
+<p><strong>证明</strong> :
+假设不为常数, 利用开映射定理导出矛盾.<span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习6</strong> <code>(From Stein Ch1 ET14)</code> Suppose <span class="arithmatex">\(\{a_n\}_{n = 1}^N\)</span> and <span class="arithmatex">\(\{b_n\}_{n = 1}^N\)</span> are two finite sequences of complex numbers. Let <span class="arithmatex">\(B_k = \sum_{n=1}^k b_n\)</span> denote the partial sums of the series <span class="arithmatex">\(\sum b_n\)</span>  with the convention <span class="arithmatex">\(B_0 = 0\)</span>. Prove <strong>the summation by parts</strong> formula</p>
+<div class="arithmatex">\[\sum_{n =M}^N a_nb_n = a_NB_N - a_MB_{M-1} - \sum_{n=M}^{N-1}(a_{n+1}-a_n)B_n. \]</div>
+</blockquote>
+<p><strong>证明</strong> :</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \sum_{n = M}^N a_nb_n &amp;= \sum_{n = M}^N a_n(B_n - B_{n-1})\\
+    &amp;= \sum_{n = M}^N a_nB_n - \sum_{n = M}^N a_nB_{n-1}\\
+    &amp;=a_NB_N + \sum_{n = M}^{N-1} a_{n}B_n -\sum_{n = M - 1}^{N-1} a_{n+1}B_n\\
+    &amp;=a_NB_N - a_MB_{M-1} - \sum_{n=M}^{N-1}(a_{n+1}-a_n)B_n.
+\end{align*}
+\]</div>
+<p><span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习7</strong> <code>(From Stein Ch1 ET15)</code><strong>Abel's theorem.</strong> Suppose <span class="arithmatex">\(\sum_{n=1}^\infty a_n\)</span> converges. Prove that</p>
+<div class="arithmatex">\[\lim_{r \to 1, \: r &lt; 1} \sum_{n=1}^\infty r^na_n = \sum_{n=1}^\infty a_n.\]</div>
+<p>[Hint: Sum by parts.] In other words, if a series converges, then it is Abel summable with the same limit. For the preeise definition of these terms, and more information on summability methods, we refer the reader to Book I, Chapter 2.</p>
+</blockquote>
+<p><strong>证明</strong> :
+直接计算有</p>
+<div class="arithmatex">\[(1-r)\sum_{n=1}^NA_nr^n = \sum_{n=1}^NA_nr^n-\sum_{n=2}^{N+1}A_{n-1}r^n = \sum_{n=1}^N a_nr^n - A_Nr^{N+1}.\]</div>
+<p>注意到有 <span class="arithmatex">\(A_n \to A\)</span>, 可知 <span class="arithmatex">\(A_n\)</span> 有界. 而 <span class="arithmatex">\(r \in [0, 1)\)</span>, 于是有 <span class="arithmatex">\(A_Nr^{N+1} \to 0, N \to \infty\)</span>.
+因此在上式中令 <span class="arithmatex">\(N \to \infty\)</span> 得</p>
+<div class="arithmatex">\[(1-r)\sum_{n=1}^{\infty}A_nr^n = \sum_{n=1}^{\infty}a_nr^n.\]</div>
+<p>下证 : <span class="arithmatex">\(\displaystyle\lim_{r \to 1^-} (1-r)\sum_{n=1}^\infty A_nr^n = A\)</span></p>
+<p><span class="arithmatex">\(\forall \varepsilon &gt; 0\)</span>, 由<span class="arithmatex">\(A_n \to A\)</span>知, <span class="arithmatex">\(\exists N_0, \forall n &gt; N_0, |A_n - A| &lt; \varepsilon\)</span>; 又<span class="arithmatex">\(A_n\)</span> 有界, 存在<span class="arithmatex">\(M &gt; 0,\)</span> 使得<span class="arithmatex">\(|A_n| \le M, |A|\le M,\)</span> 取 <span class="arithmatex">\(\delta = \dfrac{\varepsilon}{2N_0M}\)</span>, 于是当 <span class="arithmatex">\(1 - \delta &lt; r &lt; 1\)</span> 时, 有</p>
+<div class="arithmatex">\[
+\begin{align*}
+    |(1 - r)\sum_{n = 1}^\infty A_nr^n - A| &amp;= |(1 - r)\sum_{n = 1}^\infty (A_n - A)r^n - (r-1)A|\\
+    &amp;\le |(1-r)\sum_{n=1}^{N_0}(A_n - A)r^n| + |(1-r)\sum_{n = N_0 + 1}^\infty (A_n - A)r^n| + |(r-1)A|\\
+    &amp;\le (1-r)\sum_{n=1}^{N_0}|A_n - A|r^n + (1-r)\sum_{n=N_0+1}^\infty |A_n -A|r^n + \delta M\\
+    &amp;\le (1-r)2MN_0 + (1-r)\sum_{n=0}^\infty r^n\varepsilon + \delta M\\
+    &amp;\le 2\varepsilon + \dfrac{\varepsilon}{2N_0}
+\end{align*}
+\]</div>
+<p>这说明</p>
+<div class="arithmatex">\[\lim_{r \to 1^-} \sum_{n=1}^\infty a_nr^n = \lim_{r \to 1^-} (1-r)\sum_{n=1}^\infty A_nr^n = A.\]</div>
+<p>也即 <span class="arithmatex">\(\sum a_n\)</span> 可阿贝尔求和, 且 Abel 和为原级数<span class="arithmatex">\(A\)</span>. <span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<hr />
+<p><strong>Remark</strong> : <font color = "rgba(2888, 100, 255)"> 下文来自 Stein《 Fourier Analysis》Chapter2 ET13 </font></p>
+<blockquote>
+<p>The purpose of this exercise is to prove that Abel summability is stronger than  the standard or Cesàro methods of summation.</p>
+<ol>
+<li>
+<p>Show that if the series <span class="arithmatex">\(\sum_{n=1}^\infty c_n\)</span> of complex numbers converges to a finite limit <span class="arithmatex">\(s\)</span>, then the series is Abel summable to <span class="arithmatex">\(s\)</span>.</p>
+</li>
+<li>
+<p>However, show that there exists series which are Abel summable, but that do not converge.[Hint: Try <span class="arithmatex">\(c_n = (-1)^n\)</span>. What is the Abel limit of <span class="arithmatex">\(c_n\)</span>?]</p>
+</li>
+<li>
+<p>Argue similarly to prove that if a series <span class="arithmatex">\(\sum_{n=1}^\infty c_n\)</span> is Cesàro  summable to <span class="arithmatex">\(\sigma\)</span>, then it is Abel summable to <span class="arithmatex">\(\sigma\)</span>. [Hint: Note that <span class="arithmatex">\(
+\sum_{n=1}^\infty c_nr^n = (1-r)\sum_{n=1}^\infty n\sigma_nr^n\)</span>
+and assume <span class="arithmatex">\(\sigma = 0\)</span>.]</p>
+</li>
+<li>
+<p>Give an example of a series that is Abel summable but not Cesàro summable. [Hint: Try <span class="arithmatex">\(c_n = (-1)^{n-1}n\)</span>. Note that if <span class="arithmatex">\(\sum c_n\)</span> is Cesàro summable, then <span class="arithmatex">\(c_n / n\)</span> tends to zero.]</p>
+</li>
+</ol>
+<p>The results above can be summarized by the following implications about series: </p>
+<div class="arithmatex">\[\text{convergent} \Rightarrow \text{Cesàro summable} \Rightarrow \text{Abel summable} \]</div>
+<p>and the fact that none of the arrows can be reversed.</p>
+</blockquote>
+<p>证明来源<a href="https://zhuanlan.zhihu.com/p/651968522">知乎链接</a>, 下为知乎截图</p>
+<!-- ![xxx](./Pictures/Ch1/Zhihu1.jpeg)
+![xxx](Pictures/Ch1/Zhihu2.jpeg) -->
+
+<details class="tip">
+<summary>展开阅读截图1(图片较长)</summary>
+<p><img alt="知乎图表" src="../../img/Ch1/Zhihu1.jpeg" /></p>
+</details>
+<details class="tip">
+<summary>展开阅读截图2(图片较长)</summary>
+<p><img alt="知乎图表" src="../../img/Ch1/Zhihu2.jpeg" /></p>
+</details>
+<p><em>来源于知乎
+作者: 元亨利贞</em></p>
+<hr />
+<blockquote>
+<p><strong>练习8</strong> <code>(From Stein Ch1 ET21)</code> Show that for <span class="arithmatex">\(|z| &lt; 1\)</span>, one has </p>
+<div class="arithmatex">\[\frac{z}{1-z^2}+ \frac{z^2}{1-z^4}+\cdots + \frac{z^{2^n}}{1-z^{2^{n+1}}}+\cdots =\frac{z}{1-z}.\]</div>
+<p>and </p>
+<div class="arithmatex">\[\frac{z}{1+z} + \frac{2z^2}{1+z^2}+\cdots +\frac{2^kz^{2^k}}{1+z^{2^k}}+\cdots =\frac{z}{1-z}.\]</div>
+<p>Justify any change in the order of summation.
+[Hint: Use the dyadic expansion of an integer and the fact that <span class="arithmatex">\(2^{k+1} - 1 = 1 + 2 + 2^2 + \cdots + 2 ^ k\)</span>.]</p>
+</blockquote>
+<p><strong>证明</strong> :
+对上面一式, 有</p>
+<div class="arithmatex">\[\text{LHS}= \sum_{k=0}^\infty z^{2k+1} + \sum_{k=0}^\infty z^{4k+2}+\cdots +\sum_{k=0}^\infty z^{2^{n+1}k+2^n}+\cdots=\sum_{n=0}^\infty\sum_{k=1}^\infty z^{2^{n+1}k+2^n}.\]</div>
+<div class="arithmatex">\[\text{RHS}=\sum_{k=0}^\infty z^l.\]</div>
+<p>对于二元组<span class="arithmatex">\((n_1, k_1), (n_2, k_2)\in \mathbb{N}^2\)</span>, 不妨设<span class="arithmatex">\(n_2 \ge n_1\)</span>, 若</p>
+<div class="arithmatex">\[(2k_1+1)2^{n_1}=(2k_2+1)2^{n_2} \Leftrightarrow 2k_1+1 =(2k_2+1)2^{n_2-n_1}, \]</div>
+<p>则必有<span class="arithmatex">\(n_1=n_2\)</span>, 否则<span class="arithmatex">\((2k_2+1)2^{n_2-n_1}\)</span>为偶数, 而<span class="arithmatex">\(2k_1+1\)</span>为奇数, 上式不可能成立, 于是上式进一步变为</p>
+<div class="arithmatex">\[2k_1+1=(2k_2+1)2^{n_2-n_1}=2k_2+1,\]</div>
+<p>即又有<span class="arithmatex">\(k_1=k_2\)</span>. 因此对于不同的二元组<span class="arithmatex">\(n, k\)</span>, 求和式中的<span class="arithmatex">\(z^{2^{n+1}k+2^n}\)</span>的指数部分不同, 故而左式求和的每一项都对于右式求和中不同的某一项, 从而左式包含右式.</p>
+<p>另一方面, 由二进制, <span class="arithmatex">\(\forall l \in \mathbb{Z}_+\)</span>都有唯一的二进制分解</p>
+<div class="arithmatex">\[l=a_02^0+a_12^1+\cdots +a_m2^m+\cdots,\]</div>
+<p>其中<span class="arithmatex">\(a_m\)</span>等于 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(1\)</span>, 并且 <span class="arithmatex">\(a_m\)</span> 不全为 <span class="arithmatex">\(0\)</span>. 设 <span class="arithmatex">\(a_n\)</span> 是第一个不为 <span class="arithmatex">\(0\)</span> 的数, 即</p>
+<div class="arithmatex">\[a_0=a_1= \cdots =a_{n-1} = 1, \]</div>
+<p>因此<span class="arithmatex">\(n\in \mathbb{N}\)</span>并且有</p>
+<div class="arithmatex">\[l=2^n(1+2k), k=a_{n+1}2^0+a_{n+2}2^1+\cdots \in \mathbb{N},  \]</div>
+<p>因此 <span class="arithmatex">\(\forall l \in \mathbb{Z}_+\)</span>, 右式求和中的 <span class="arithmatex">\(z^l\)</span> 都能在左式求和中找到某一项 <span class="arithmatex">\(z^{2^{n+1}k+2^n}\)</span> 与其对应, 即右式包含左式.</p>
+<p>因此左右两式中的每一项都是一一对应的, 并且由于绝对收敛求和顺序可以打乱, 所以</p>
+<div class="arithmatex">\[\sum_{n=0}^\infty \sum_{k=0}^\infty z^{2^{n+1}k+2^n}=\sum_{l=1}^\infty z^l. \]</div>
+<p>再看第二个式子</p>
+<p>注意到 <span class="arithmatex">\(\frac{1}{z-1}+\frac{1}{z+1}=\frac{2z}{z^2-1}.\)</span>
+将 <span class="arithmatex">\(z\)</span> 替为 <span class="arithmatex">\(z^{2^k}\)</span> 并两边同乘之以<span class="arithmatex">\(2^kz^{2^k}\)</span>得</p>
+<div class="arithmatex">\[ \frac{2^kz^{2^k}}{z^{2^k}+1} =  \frac{2^{k+1}z^{2^{k+1}}}{z^{2^{k+1}}-1}-\frac{2^kz^{2^k}}{z^{2^k}-1}.\]</div>
+<p>因此 </p>
+<div class="arithmatex">\[\text{LHS} = \sum_{k=0}^\infty \frac{2^{k+1}z^{2^{k+1}}}{z^{2^{k+1}}-1}-\frac{2^kz^{2^k}}{z^{2^k}-1} = -\frac{z}{z-1} =\frac{z}{1-z}.\]</div>
+<p><span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<blockquote>
+<p><strong>练习9</strong> <code>(From Stein Ch1 ET23)</code> Consider the function <span class="arithmatex">\(f\)</span> defined on <span class="arithmatex">\(\mathbb{R}\)</span> by</p>
+<div class="arithmatex">\[f(x) = \begin{cases}0&amp;, \text{if } x \le 0, \\e^{-1 / x^2}&amp;, \text{if } x &gt; 0.\end{cases}\]</div>
+<p>Prove that <span class="arithmatex">\(f\)</span> is indefinitely differentiable on <span class="arithmatex">\(\mathbb{R}\)</span>, and that <span class="arithmatex">\(f^{(n)}(0) = 0\)</span> for all <span class="arithmatex">\(n&gt;1\)</span>. Consider that <span class="arithmatex">\(f\)</span> does not have a <abbr title="幂级数展开">converging power series expansion</abbr> <span class="arithmatex">\(\sum_{n=0}^\infty a_nx^n\)</span> for <span class="arithmatex">\(x\)</span> near the origin.</p>
+</blockquote>
+<p><strong>证明</strong> :
+当<span class="arithmatex">\(x&gt;0\)</span>时, 这个函数显然是无穷此可导的. 我们要证明当它在 <span class="arithmatex">\(x=0\)</span> 处可无穷此可导. 先求 <span class="arithmatex">\(f'(0)\)</span>. 做变换 <span class="arithmatex">\(u=1/t\)</span> 之后可见</p>
+<div class="arithmatex">\[ f'(0)=\lim_{t\to 0}\frac{f(t) - f(0)}{t} = \lim_{t \to 0}\frac{e^{-1/t^2}}{t} = \lim_{u \to \infty}\frac{u}{e^{u^2}} = 0. \]</div>
+<p>由此得出</p>
+<div class="arithmatex">\[f'(x) = \begin{cases}0&amp;, \text{if }x \le 0, \\\frac{2}{x^3}e^{-1/x^2}&amp;, \text{if }x &gt; 0. \end{cases}\]</div>
+<p>我们用归纳法证明: 当 <span class="arithmatex">\(x &gt; 0\)</span> 且 <span class="arithmatex">\(n \in \mathbb{N}^+\)</span> 时, 有</p>
+<div class="arithmatex">\[f^{(n)}(x) = P_n(\frac 1x)e^{-1/x^2}.\]</div>
+<p>这里 <span class="arithmatex">\(P_n(t)\)</span> 是 <span class="arithmatex">\(t\)</span> 的 <span class="arithmatex">\(3n\)</span> 次多项式. 当 <span class="arithmatex">\(n = 1\)</span> 时, 上面的计算表明这是对的. 设 <span class="arithmatex">\(P_k(t)\)</span> 是 <span class="arithmatex">\(t\)</span> 的 <span class="arithmatex">\(3k\)</span> 次多项式, 那么当 <span class="arithmatex">\(x &gt; 0\)</span> 时, </p>
+<div class="arithmatex">\[f^{(k+1)}(x) = \left(P_k(\frac 1x) e^{-1/ x^2} \right)' = \left(P_k(\frac 1x)\frac 2{x^3} - P'_k(\frac 1x)\frac 1{x^2}\right)e^{-1/ x^2}. \]</div>
+<p>因此, </p>
+<div class="arithmatex">\[P_{k+1}(t) = 2t^3P_k(t)-t^2P'_k(t).\]</div>
+<p>由归纳假设, <span class="arithmatex">\(P_k(t)\)</span> 是 <span class="arithmatex">\(t\)</span> 的 <span class="arithmatex">\(3(k+1)\)</span> 次多项式. 现在来证明 <span class="arithmatex">\(f^{(n)}(0) = 0\)</span> 对一切的 <span class="arithmatex">\(n \in \mathbb{N}^+\)</span> 均成立. 仍用归纳法. 当 <span class="arithmatex">\(n = 1\)</span> 时结论已被证明. 设 <span class="arithmatex">\(f^{(k)}(0) = 0\)</span>, 于是</p>
+<div class="arithmatex">\[f^{(k+1)}(0) = \lim_{t \to 0} \frac{f^{(k)}(t) - f^{(k)}(0)}{t} = \lim_{t \to 0} \frac{f^{(k)}(t)}{t} = \lim_{t \to 0} P_k(\frac 1t)\frac{e^{-1/t^2}}{t} = \lim_{u \to \infty}\frac{uP_k(u)}{e^{u^2}} = 0\]</div>
+<p>从而知 <span class="arithmatex">\(a_n \equiv 0\)</span>, 进而 <span class="arithmatex">\(f(x) \ne \sum_{n = 0}^\infty a_nx^n.\)</span> <span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<hr />
+<p><strong>Remark</strong> : <font color = "red"> 这是一个重要的反例!!! 从而我们知道无穷可微函数不一定是实解析函数 </font>
+上面这个函数在原点附近的任何开邻域都不收敛, 原因是 <span class="arithmatex">\(f(z) = e^z\)</span> 在无穷远点有奇点.</p>
+<hr />
+<h2 id="_1">作业题节选</h2>
+<blockquote>
+<p><strong>习题1</strong> : <code>(From Ch1 17)</code> 设 <span class="arithmatex">\(U, V\)</span> 是 <span class="arithmatex">\(\mathbb{C}\)</span> 中的区域, 映射 <span class="arithmatex">\(f : U \to V\)</span> 称为<strong>开映射</strong>, 如果 <span class="arithmatex">\(f\)</span> 将<span class="arithmatex">\(U\)</span> 中的开集映成 <span class="arithmatex">\(V\)</span> 中的开集; <span class="arithmatex">\(f\)</span> 称为<strong>逆紧</strong>的, 如果对 <span class="arithmatex">\(V\)</span> 中的任意紧集 <span class="arithmatex">\(K \subset V\)</span>, <span class="arithmatex">\(f^{-1}(K)\)</span> 是 <span class="arithmatex">\(U\)</span> 中的紧集. 证明 : 如果 <span class="arithmatex">\(f\)</span> 是开且逆紧的映射, 则 <span class="arithmatex">\(f(U) = V\)</span>.</p>
+</blockquote>
+<p><strong>证明</strong> :
+假设 <span class="arithmatex">\(f\)</span> 非满, 则存在点 <span class="arithmatex">\(v \in V\)</span> 使得 <span class="arithmatex">\(v \notin f(U)\)</span>. 由于 <span class="arithmatex">\(f\)</span> 是开映射, <span class="arithmatex">\(f(U)\)</span> 是 <span class="arithmatex">\(V\)</span> 中的开集.</p>
+<ul>
+<li>我们断言 <span class="arithmatex">\(f(U) \subsetneq (\overline{f(U)}\cap V)\)</span>. 这相当于是说 <span class="arithmatex">\(f(U)\)</span> 是 <span class="arithmatex">\(V\)</span>- 子拓扑空间中的真开集.<br />
+  假如 <span class="arithmatex">\(f(U)\)</span> 在 <span class="arithmatex">\(V\)</span>- 拓扑子空间中即开又闭, 从而 <span class="arithmatex">\(f(U)\)</span> 是 <span class="arithmatex">\(V\)</span> 的联通分支. 此时只能有 <span class="arithmatex">\(f(U) = V.\)</span> 矛盾.</li>
+</ul>
+<p>存在点 <span class="arithmatex">\(v \in V \cap (\partial f(U))\)</span>, 即 <span class="arithmatex">\(V\)</span> 属于 <span class="arithmatex">\(f(U)\)</span> 的边界的点. 对于这样的 <span class="arithmatex">\(v\)</span>, 由于 <span class="arithmatex">\(V\)</span> 是开集, 存在 <span class="arithmatex">\(\delta &gt; 0\)</span> 使得有闭圆盘<span class="arithmatex">\(D_\delta = \{z \in V : |z-v|\le \delta \} \subset V\)</span>. 对于每个<span class="arithmatex">\(n \in \mathbb{N}\)</span>, 定义 <span class="arithmatex">\(D_n = \{z\in V : |z - v| \le \delta / n\}\)</span>, 则 <span class="arithmatex">\(D_n\)</span> 是紧集, 且 <span class="arithmatex">\(D_{n+1} \subset D_n\)</span>.</p>
+<p>由于 <span class="arithmatex">\(v\)</span> 属于 <span class="arithmatex">\(f(U)\)</span> 的闭包, 故每个 <span class="arithmatex">\(D_n\)</span> 包含 <span class="arithmatex">\(f(U)\)</span> 中的点, 从而 <span class="arithmatex">\(f^{-1}(U) \ne \emptyset\)</span>. 由条件, 紧集的原像是紧集, 所以每个 <span class="arithmatex">\(K_n = f^{-1}(D_n)\)</span> 是紧集, 且由 <span class="arithmatex">\(D_{n+1} \subset D_n\)</span>, 有 <span class="arithmatex">\(K_{n+1} \subset K_n\)</span>, 即 <span class="arithmatex">\(\{K_n\}\)</span>是非空紧集套.</p>
+<p>存在复平面中, 紧集套的非空交非空. 任取 <span class="arithmatex">\(u \in \bigcap _{n=1}^\infty K_n\)</span>, 则对每个 <span class="arithmatex">\(n\)</span>, 有 <span class="arithmatex">\(u \in K_n\)</span>, 对应的有 <span class="arithmatex">\(f(u) \in D_n\)</span>. 由于 <span class="arithmatex">\(f(u) \in \bigcap_{n=1}^\infty D_n = \{v\}\)</span>, 这与 <span class="arithmatex">\(v \in f(U)\)</span> 矛盾! 因此 <span class="arithmatex">\(f\)</span> 是满射.
+<span style="float:right"><span class="arithmatex">\(\square\)</span></span></p>
+<!-- Ch1 -->
+
+<!-- Ch2 -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../Ch2/Ch2/" class="md-footer__link md-footer__link--next" aria-label="Next: Cauchy&#39;s Theorem and Its Applications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cauchy's Theorem and Its Applications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.footer", "navigation.instant", "content.action.view", "navigation.tracking", "navigation.indexes", "content.tabs.link", "content.code.copy", "content.code.annotate", "content.tooltips", "search.highlight", "search.suggest", "toc.follow", "content.action.edit", "navigation.top"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

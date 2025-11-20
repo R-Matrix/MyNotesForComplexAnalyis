@@ -1,0 +1,67 @@
+/* 全局字体设置 */
+body {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif !important;
+}
+
+/* 代码样式强调 */
+.md-typeset code {
+    background-color: rgba(175, 184, 193, 0.2) !important;
+    border: 1px solid rgba(175, 184, 193, 0.4) !important;
+    border-radius: 4px !important;
+    padding: 0.1em 0.3em !important;
+    font-weight: 570 !important;
+    color: #d63384 !important;
+    font-size: 11pt !important;
+}
+
+/* 放大一级标题 */
+.md-typeset h1 {
+    font-size: 35pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 2px solid #e1e4e8 !important;
+}
+
+/* 放大二级标题 */
+.md-typeset h2 {
+    font-size: 22pt !important;
+    font-weight: 600 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.3rem !important;
+    border-bottom: 1px solid #eaecef !important;
+}
+
+/* 正文段落样式 */
+.md-typeset p {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif !important;
+    font-size: 12pt;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 列表项字体 */
+.md-typeset li {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif !important;
+}
+
+/* 表格内容字体 */
+.md-typeset table {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif !important;
+}
+
+/* 导航和侧边栏字体保持原样（可选） */
+.md-nav {
+    font-family: inherit;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 76.1875em) {
+    .md-typeset h1 {
+        font-size: 1.8rem !important;
+    }
+    .md-typeset h2 {
+        font-size: 1.5rem !important;
+    }
+}
