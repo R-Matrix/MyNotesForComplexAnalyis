@@ -1,0 +1,138 @@
+.md-typeset .admonition,
+.md-typeset details {
+  border-width: 0;
+  border-left-width: 4px;
+}
+
+/* 学术环境警告框图标定义 */
+:root {
+  /* 定理图标 - 书本 */
+  --md-admonition-icon--theorem: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>');
+  
+  /* 引理图标 - 拼图 */
+  --md-admonition-icon--lemma: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/></svg>');
+  
+  /* 证明图标 - 勾选标记 */
+  --md-admonition-icon--proof: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+  
+  /* 定义图标 - 字母 D */
+  --md-admonition-icon--definition: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.5 4c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-11c-.83 0-1.5-.67-1.5-1.5v-13c0-.83.67-1.5 1.5-1.5h11M18.5 6h-11v12h11V6z"/><text x="8" y="16" font-family="Arial" font-size="14" font-weight="bold">D</text></svg>');
+  
+  /* 备注图标 - 信息 */
+  --md-admonition-icon--remark: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>');
+  
+  /* 推论图标 - 箭头 */
+  --md-admonition-icon--corollary: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/></svg>');
+  
+  /* 示例图标 - 灯泡 */
+  --md-admonition-icon--example: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/></svg>');
+}
+
+/* 定理环境 - 蓝色 */
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+  border-color: rgb(33, 150, 243);
+}
+.md-typeset .theorem > .admonition-title,
+.md-typeset .theorem > summary {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+.md-typeset .theorem > .admonition-title::before,
+.md-typeset .theorem > summary::before {
+  background-color: rgb(33, 150, 243);
+  -webkit-mask-image: var(--md-admonition-icon--theorem);
+  mask-image: var(--md-admonition-icon--theorem);
+}
+
+/* 引理环境 - 深蓝色 */
+.md-typeset .admonition.lemma,
+.md-typeset details.lemma {
+  border-color: rgb(76, 175, 80);
+}
+.md-typeset .lemma > .admonition-title,
+.md-typeset .lemma > summary {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.md-typeset .lemma > .admonition-title::before,
+.md-typeset .lemma > summary::before {
+  background-color: rgb(76, 175, 80);
+  -webkit-mask-image: var(--md-admonition-icon--lemma);
+  mask-image: var(--md-admonition-icon--lemma);
+}
+
+/* 证明环境 - 绿色 */
+.md-typeset .admonition.proof,
+.md-typeset details.proof {
+  border-color: rgb(228, 227, 227);
+}
+.md-typeset .proof > .admonition-title,
+.md-typeset .proof > summary {
+  background-color: rgba(211, 211, 211, 0.2);
+}
+.md-typeset .proof > .admonition-title::before,
+.md-typeset .proof > summary::before {
+  background-color: rgb(128, 128, 128);
+  -webkit-mask-image: var(--md-admonition-icon--proof);
+  mask-image: var(--md-admonition-icon--proof);
+}
+
+/* 定义环境 - 紫色 */
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+  border-color: rgb(156, 39, 176);
+}
+.md-typeset .definition > .admonition-title,
+.md-typeset .definition > summary {
+  background-color: rgba(156, 39, 176, 0.1);
+}
+.md-typeset .definition > .admonition-title::before,
+.md-typeset .definition > summary::before {
+  background-color: rgb(156, 39, 176);
+  -webkit-mask-image: var(--md-admonition-icon--definition);
+  mask-image: var(--md-admonition-icon--definition);
+}
+
+/* 备注环境 - 橙色 */
+.md-typeset .admonition.remark,
+.md-typeset details.remark {
+  border-color: rgb(255, 152, 0);
+}
+.md-typeset .remark > .admonition-title,
+.md-typeset .remark > summary {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+.md-typeset .remark > .admonition-title::before,
+.md-typeset .remark > summary::before {
+  background-color: rgb(255, 152, 0);
+  -webkit-mask-image: var(--md-admonition-icon--remark);
+  mask-image: var(--md-admonition-icon--remark);
+}
+
+/* 推论环境 - 青色 */
+.md-typeset .admonition.cor,
+.md-typeset details.corollary {
+  border-color: rgb(0, 188, 212);
+}
+.md-typeset .cor > .admonition-title,
+.md-typeset .cor > summary {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+.md-typeset .cor > .admonition-title::before,
+.md-typeset .cor > summary::before {
+  background-color: rgb(0, 188, 212);
+  -webkit-mask-image: var(--md-admonition-icon--corollary);
+  mask-image: var(--md-admonition-icon--corollary);
+}
+
+/* 警告框样式设置 */
+.md-typeset .admonition {
+    font-family: "Times New Roman", "仿宋", "FangSong", serif !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 警告框标题字体也使用罗马新体和仿宋 */
+.md-typeset .admonition-title {
+    font-family: "Times New Roman", "仿宋", "FangSong", serif !important;
+    font-weight: bold;
+}

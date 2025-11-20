@@ -1,0 +1,133 @@
+site_name: 复分析习题
+site_author: R_matrix
+
+theme:
+  name : material
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    # 导航类功能
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
+    - navigation.instant
+    - content.action.view
+    - navigation.tracking
+    - navigation.indexes
+    - content.tabs.link
+    
+    # 内容展示类功能
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    
+    # 搜索类功能
+    - search.highlight
+    - search.suggest
+    
+    # 其他功能
+    - toc.follow
+    - content.action.edit
+    - navigation.top
+
+
+
+markdown_extensions:
+  - pymdownx.blocks.admonition:
+      types:
+        - new
+        - settings
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+        - remark
+        - proof
+        - theorem
+        - lemma
+        - cor
+        - definition
+  - pymdownx.blocks.details:
+      types:
+      - name: details-new
+        class: new
+      - name: details-settings
+        class: settings
+      - name: details-note
+        class: note
+      - name: details-abstract
+        class: abstract
+      - name: details-info
+        class: info
+      - name: details-tip
+        class: tip
+      - name: details-success
+        class: success
+      - name: details-question
+        class: question
+      - name: details-warning
+        class: warning
+      - name: details-failure
+        class: failure
+      - name: details-danger
+        class: danger
+      - name: details-bug
+        class: bugc
+      - name: details-example
+        class: example
+      - name: details-quote
+        class: quote
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      # auto_title: true
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.blocks.caption
+  - abbr
+  - pymdownx.snippets:
+      auto_append:
+        - watch/includes/abbreviations.md
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/math_env.css
+  - stylesheets/note_block.css
+
+
+nav:
+  - 首页: 
+    - Home: index.md
+  - 第一章: 
+    - Preliminaries to Complex Analysis: Ch1/Ch1.md
+  - 第二章: 
+    - Cauchy's Theorem and Its Applications: Ch2/Ch2.md
