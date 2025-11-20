@@ -1,5 +1,6 @@
 site_name: 复分析习题
-site_author: R_matrix
+site_author: R-Matrix
+site_url: https://r-matrix.github.io/MyNotesForComplexAnalyis/
 
 theme:
   name : material
