@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://r-matrix.github.io/MyNotesForComplexAnalysis/</loc>
-         <lastmod>2025-11-21</lastmod>
+         <lastmod>2025-11-29</lastmod>
+    </url>
+    <url>
+         <loc>https://r-matrix.github.io/MyNotesForComplexAnalysis/license/</loc>
+         <lastmod>2025-11-29</lastmod>
     </url>
     <url>
          <loc>https://r-matrix.github.io/MyNotesForComplexAnalysis/Ch1/Ch1/</loc>
-         <lastmod>2025-11-21</lastmod>
+         <lastmod>2025-11-29</lastmod>
     </url>
     <url>
          <loc>https://r-matrix.github.io/MyNotesForComplexAnalysis/Ch2/Ch2/</loc>
-         <lastmod>2025-11-21</lastmod>
+         <lastmod>2025-11-29</lastmod>
     </url>
 </urlset>
