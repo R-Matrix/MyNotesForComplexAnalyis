@@ -735,6 +735,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三题(12分)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -827,6 +838,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#12_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三题(12分)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -890,7 +912,10 @@
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>设曲线 <span class="arithmatex">\(\gamma(t) = te^{it}\)</span>, 方向为从 <span class="arithmatex">\(t = 0\)</span> 到 <span class="arithmatex">\(t = \pi\)</span>. 分别计算以下曲线积分</p>
-<p>(1) <span class="arithmatex">\(\int_\gamma \bar z dz;\quad\)</span> (2) <span class="arithmatex">\(\int_\gamma |z| dz;\quad\)</span> (3) <span class="arithmatex">\(\int_\gamma |z||dz|; \quad\)</span> (4) <span class="arithmatex">\(\int_\gamma z(1+|z|^2)^{-1/2}|dz|.\)</span></p>
+<p>(1) <span class="arithmatex">\(\int_\gamma \bar z dz;\quad\)</span><br />
+(2) <span class="arithmatex">\(\int_\gamma |z| dz;\quad\)</span><br />
+(3) <span class="arithmatex">\(\int_\gamma |z||dz|; \quad\)</span><br />
+(4) <span class="arithmatex">\(\int_\gamma z(1+|z|^2)^{-1/2}|dz|.\)</span></p>
 </div>
 <details class="proof">
 <summary>解答</summary>
@@ -928,8 +953,30 @@
 </details>
 <div class="admonition remark">
 <p class="admonition-title">Remark</p>
-<p>关于教材的<a href="../../RefSource/Complex_Analysis_zh_cn.pdf#page=100">12</a></p>
+<p>关于教材的Schwarz引理在<a href="../../RefSource/Complex_Analysis_zh_cn.pdf#page=109" title="这里不知道为什么无法跳转指定页码, 这里的功能有待查询">第109页</a></p>
 </div>
+<hr />
+<h3 id="12_1">第三题(12分)</h3>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>求将 <span class="arithmatex">\(1, 0, -1\)</span> 分别映射至 <span class="arithmatex">\(i, 1 + i, 1\)</span> 的分式线性映射 <span class="arithmatex">\(L(z)\)</span>, 并求</p>
+<p>(1) 单位圆周 <span class="arithmatex">\(\{|z| = 1\}\)</span>;<br />
+(2) 单位开圆盘 <span class="arithmatex">\(\{|z| &lt;&gt; 1\}\)</span>;<br />
+(3) 虚轴 <span class="arithmatex">\(\mathfrak{R}z = 0\)</span></p>
+<p>在 <span class="arithmatex">\(L\)</span> 映射下的像.</p>
+</div>
+<details class="proof">
+<summary>解答</summary>
+<p>我们这里当然可以设四个系数进行方程组求解, 这里使用分式线性变换保持交比进行计算.</p>
+<div class="arithmatex">\[(z, 1, 0, -1) = (L(z), i, 1 + i, 1)\]</div>
+<p>即</p>
+<div class="arithmatex">\[\frac{(z - 0)(1 - (-1))}{(z - (-1))(1 - 0)} = \frac {(L(z) - (1 + i))(i - 1)}{(L(z) - 1)(i - (1 + i))}\]</div>
+<p>化简得</p>
+<div class="arithmatex">\[L(z) = -\frac{1 + i}{iz - 1}.\]</div>
+<p>由于分式线性变换把圆和直线映为圆或直线, 从而再考虑点 <span class="arithmatex">\(z = i\)</span>, <span class="arithmatex">\(L(i) = \frac{1 + i}{2} := w_4\)</span>, 发现 <span class="arithmatex">\(w_1 = i, w_3 = 1\)</span> 与 <span class="arithmatex">\(w_4\)</span> 三点共线(<span class="arithmatex">\(w_4\)</span> 恰为 <span class="arithmatex">\(w_1\)</span> 与 <span class="arithmatex">\(w_3\)</span> 中点), 因此 <span class="arithmatex">\(L\)</span> 把单位圆周映为直线 <span class="arithmatex">\(l_1 : x + y - 1 = 0\)</span>.</p>
+<p>由于分式线性变换在 <span class="arithmatex">\(\overline {\mathbb C}\)</span> 是解析的, 具有保向性, 从而只需要判断把单位圆盘内部映为直线上方或下方. 考虑 <span class="arithmatex">\(L(0) = 1 + i\)</span>, 因此把单位圆盘映为 <span class="arithmatex">\(x + y - 1 &gt; 0\)</span> 的区域.</p>
+<p>不妨设 <span class="arithmatex">\(z = it, t \in \mathbb R\)</span>, 那么 <span class="arithmatex">\(L(z) = \frac {1 + i}{1 + t} = \frac {1}{1 + t} + i \frac {1}{1 + t}\)</span>, 其满足 <span class="arithmatex">\(\text{Im}(L(z)) = \text{Re}(L(z))\)</span> , 从而 <span class="arithmatex">\(L\)</span> 把虚轴映为直线 <span class="arithmatex">\(x - y = 0\)</span>.</p>
+</details>
 <!-- Ch1 -->
 
 <!-- Ch2 -->
