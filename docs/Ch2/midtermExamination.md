@@ -102,7 +102,7 @@ $|z| = |te^{it}| = t$, $\quad |dz| = |\gamma'(t)|dt = \sqrt {1 + t^2} dt$
 求将 $1, 0, -1$ 分别映射至 $i, 1 + i, 1$ 的分式线性映射 $L(z)$, 并求
 
 (1) 单位圆周 $\{|z| = 1\}$;  
-(2) 单位开圆盘 $\{|z| <> 1\}$;  
+(2) 单位开圆盘 $\{|z| < 1\}$;  
 (3) 虚轴 $\mathfrak{R}z = 0$
 
 在 $L$ 映射下的像.
@@ -127,4 +127,229 @@ $$(z, 1, 0, -1) = (L(z), i, 1 + i, 1)$$
 由于分式线性变换在 $\overline {\mathbb C}$ 是解析的, 具有保向性, 从而只需要判断把单位圆盘内部映为直线上方或下方. 考虑 $L(0) = 1 + i$, 因此把单位圆盘映为 $x + y - 1 > 0$ 的区域.
 
 不妨设 $z = it, t \in \mathbb R$, 那么 $L(z) = \frac {1 + i}{1 + t} = \frac {1}{1 + t} + i \frac {1}{1 + t}$, 其满足 $\text{Im}(L(z)) = \text{Re}(L(z))$ , 从而 $L$ 把虚轴映为直线 $x - y = 0$.
+///
+
+---
+
+### 第四题(26分)
+
+判断下列命题是否正确
+
+/// question | Question 1
+$\mathbb C$ 中的有界无穷集合必包含收敛序列.
+///
+/// details | 解答
+    type : proof
+正确.
+
+这是 B-W 定理, 有界数列一定有收敛子列.
+///
+
+///question | Question 2
+扩充复平面 $\overline{\mathbb C}$ 中的无穷集合必包含收敛序列.
+///
+/// details | 解答
+    type : proof
+正确.
+
+由于扩充复平面 $\overline{\mathbb{C}}$ 是紧集, 利用 B-W 定理.
+///
+
+/// Question | Question 3
+若 $D \subset \mathbb C$ 是连通的, 则 $D$ 是道路连通的.
+///
+/// details | 解答
+    type : proof
+错误.
+
+反例可取 $\{z = x + iy \mid y = \sin \frac 1 x, 0 < x < 1\} \cup \{z = iy \mid -1 \le y \le 1\}$, 其连通但不道路连通.  
+反过来, 道路连通一定连通.
+///
+
+/// Question | Question 4
+若 $D \subset \mathbb C$ 是连通的, $f$ 是 $D$ 上的复值连续函数, 则 $f(D)$ 是连通的.
+///
+/// details | 解答
+    type : proof
+正确.
+
+连续函数把连通集映成连通集.
+///
+
+/// Question | Question 5
+$\sin z$ 和 $\cos z$ 是 $\mathbb C$ 上的有界函数.
+///
+/// details | 解答
+    type : proof
+错误.
+
+事实上, 他们是可取遍 $\mathbb C$ 的整函数.没有 Picard 例外值  
+另一方面, 由 Liouville 定理, 有界整函数一定是常函数.
+///
+
+/// Question | Question 6
+若 $\mathbb C$ 上的解析函数 $f, g$ 具有相同的实部, 则 $f$ 与 $g$ 仅相差一个常数.
+///
+/// details | 解答
+    type : proof
+正确.
+
+考虑 $h := f - g$ 的实部为0. 假设存在 $z_0 \in \mathbb C$ 使得 $h'(z_0) \ne 0$, 那么像集 $f(\mathbb C)$ 包含内点, 但 $\mathbb R^2$ 中的集合 $\{(u, v)\mid u = 0\}$ 无内点, 矛盾!  
+从而 $h$ 为常数.
+///
+
+/// Question | Question 7
+区域 $D$ 中的任意调和函数, 都存在共轭调和函数, 且在相差一个常数意义下唯一.
+///
+/// details | 解答
+    type : proof
+错误.
+
+缺少单连通这一条件. 单连通是必须的, 例如令 $u(x, y) = \ln (x^2 + y^2)$, 则 $u(x, y)$ 是 $\Omega = \mathbb C - \{0\}$ 上的调和函数, 但其在 $\Omega$ 上并无共轭调和函数, 由于 $\text{Ln} z$ 的多值性.
+///
+
+/// Question | Question 8
+从区域 $\Omega_1$ 到区域$\Omega_2$ 的任意解析映射都是保向的.
+///
+/// details | 解答
+    type : proof
+正确.
+
+解析函数的 Jacobi 行列式为 $|f'(z)|^2$ 处处大于等于0, 因而保向.
+///
+
+/// Question | Question 9
+设幂级数 $\sum_{n = 0} ^ \infty a_nz^n$ 的收敛半径是 $R$, 则其一定在开圆盘 $D(0, R)$ 上内闭一致收敛.
+///
+/// details | 解答
+    type : proof
+正确.
+
+这就是 Abel 定理的表述.
+///
+
+/// Question | Question 10
+若分式线性变换 $L(z)$ 不是恒等映射, 则其至多有两个不动点. 
+///
+/// details | 解答
+    type : proof
+正确.
+
+去掉非恒等映射可能不对.
+///
+
+/// Question | Question 11
+$f$ 为区域 $D$ 上的解析函数, 当且仅当对任意 $z_0 \in D$, $f(z)$ 都可以在 $z_0$ 附近展开为 $z - z_0$ 的幂级数.
+///
+/// details | 解答
+    type : proof
+正确.
+
+课本教材原话. 充分性利用定义, 必要性利用 Cauchy 定理.
+///
+
+/// Question | Question 12
+设 $f$ 为区域 $D$ 上的解析函数, 则对 $D$ 中任意简单闭曲线 $\gamma$ 都有 $\int_\gamma f(z) dz = 0$. 
+///
+/// details | 解答
+    type : proof
+错误.
+
+应该为 $\int_{\partial \Omega} f(z) dz = 0.$ 或者应该保证 $\gamma$ 所围区域 $D' \subset D.$
+///
+
+/// Question | Question 13
+若 $f$ 在区域 $D$ 上解析且在 $D$ 中的一个小圆盘 $D(0, \varepsilon)$ 上为常值, 则 $f$ 在 $D$ 上为常值.
+///
+/// details | 解答
+    type : proof
+正确.
+
+利用解析函数唯一性定理即可.
+///
+
+---
+
+### 第五题(8分)
+
+/// question
+设 $f$ 在平面区域 $\Omega \subset \mathbb C$ 上解析, 证明 : $g(z) = \overline{f(\overline{z})}$ 在区域 $\Omega ^ * = \{\overline z : z \in \Omega\}$ 上解析, 且 $g'(z) = \overline{f'(\overline{z})}$.
+///
+/// details | 解答
+    type : proof
+
+设 $f(z) = u(x, y) + iv(x, y)$, $g(z) = U(x, y) + iV(x, y)$, 那么
+
+\[U(x, y) = u(x, -y),\quad V(x, y) = -v(x, -y) \]
+
+因此
+
+\[\frac{\partial U}{\partial x} = \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} = \frac{\partial V}{\partial y}.\]
+
+\[\frac{\partial V}{\partial x} = -\frac{\partial v}{\partial x} = \frac{\partial u}{\partial y} = -\frac{\partial U}{\partial y}.\]
+
+又 $U, V$ 在 $\Omega^*$ 上连续可微, 因此 $g$ 在 $\Omega^*$ 上解析.
+
+$$g'(z) = \lim_{z_0 \to z} \frac {g(z) - g(z_0)}{z - z_0} = \lim_{z \to z_0} \frac {\overline{f(\overline{z}) - f(\overline{z_0})}}{z - z_0} = \lim_{z \to z_0} \overline {\left(\frac {{f(\overline{z}) - f(\overline{z_0})}}{\overline z - \overline {z_0}}\right)} = \overline{f'(\overline{z})}$$
+///
+
+---
+
+### 第六题(10分)
+
+/// question
+假设 $f \in C(\overline{D(0, R)})$ 在 $D(0, R)$ 上解析, 可展开为幂级数
+
+\[f(z) = \sum_{n = 0}^\infty a_n  z^n, \quad \forall z \in D(0, R).\]
+
+记其部分和函数 $S_n(z) = \sum_{k = 0} ^ n a_kz^k$.
+
+(1) 证明
+
+\[f(z) - S_n(z) = \frac {z^{n+1}}{2\pi i}\int_{|\zeta| = R} \frac {f(\zeta)}{\zeta^{n+1}(\zeta - z)}d\zeta,\quad \forall z \in D(0, R).\]
+
+(2) 证明如下的误差估计
+
+\[|f(z) - S_n(z)| \le \frac{\max_{\zeta \in D}|f(\zeta)|}{R^n(R - |z|)}|z|^{n+1}, \quad, \forall z \in D(0, R).\]
+///
+
+///details | 解答
+    type : proof
+    open : True
+
+(1) 考虑
+
+\[f(z) = \frac{1}{2\pi i}\int_{|\zeta| = R} \frac{f(\zeta)}{\zeta - z}d\zeta.\]
+
+和
+
+\[a_n = \frac{1}{2\pi i}\int_{|\zeta| = R} \frac{f(\zeta)}{\zeta^{n+1}}d\zeta.\]
+
+因此
+
+\begin{align*}
+S_n = \sum_{k = 0}^n a_kz^k &= \frac{1}{2\pi i}\int_{|\zeta| = R}\sum_{k=0}^n \frac{z^kf(\zeta)}{\zeta^{k+1}}d\zeta\\
+&= \frac {1}{2\pi i}\int_{|\zeta| = R} \frac{f(\zeta)}{\zeta}\sum_{k=0}^n\left(\frac z \zeta\right)^k d\zeta\\
+&= \frac {1}{2\pi i}\int_{|\zeta| = R} {f(\zeta)}\frac{\zeta^{n+1}-z^{n+1}}{\zeta^{n+1}(\zeta - z)} d\zeta
+\end{align*}
+
+带入即得.
+///
+
+---
+
+### 第七题(10分)
+
+/// question
+设 $m \ge 1$ 是整数. 假设 $f$ 是整函数且满足
+
+\[|f(z)| \le C(1 + |z|^m), \quad \forall z \in \mathbb C.\]
+
+利用高阶导数的 Cauchy 不等式证明 $f$ 是次数不超过 $m$ 的多项式.
+///
+
+### 第八题(12分)
+
+/// question
+设 $f = u + iv : \mathbb C \to \mathbb C$ 是解析函数, 证明在以下两种情形下的 $f$ 都一定是常数 
 ///
