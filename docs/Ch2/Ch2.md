@@ -344,7 +344,7 @@ then, $\varphi$ is linear.
 ///
 
 /// proof
-不妨设 $\varphi(0) = 0$, 否则考虑令 $f(z) = \varphi(z + x_0) - z_0$
+不妨设 $\varphi(0) = 0$, 否则考虑令 $f(z) = \varphi(z + z_0) - z_0$
 
 由于 $\varphi$ 全纯, 因此在 $0$ 处幂级数展开, 得到 $\varphi(z) = z + a_n z^n + O(z^{n+1})$.
 

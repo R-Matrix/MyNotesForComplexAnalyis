@@ -85,9 +85,17 @@ $|z| = |te^{it}| = t$, $\quad |dz| = |\gamma'(t)|dt = \sqrt {1 + t^2} dt$
 
 必要性是容易验证的.
 
-对于充分性, 我们利用 $2g(z) = f(z) - f(-z)$ 两边同时求导, 有 $f'(0) = e^{i\theta}.$
+对于充分性, 我们利用 $2g(z) = f(z) - f(-z)$ 两边同时求导, 有 $f'(0) = e^{i\theta}, |f'(0)| = 1.$
 
 而对于从单位圆盘到单位圆盘的解析映射 $h$ 一定形如 $h(z) = \frac {f(0) + e^{i\theta}z}{1 + \overline{f(0)}e^{i\theta}z}.$ 因此得 $f(0) = 0$, 从而 $f(z) = e^{i\theta}z.$
+
+----
+
+<font color = 'red'>上面的最后一行做法是不明智的</font>, 事实上我们有
+
+$$\frac{|f'(z)|}{1-|f(z)|^2} \le \frac{1}{1-|z|^2}$$
+
+带入 $z = 0$ 得 $|f(0)|^2 \le 0$, 也即 $f(0) = 0$, 从而再次利用 Schwarz 引理即可.
 ///
 
 /// remark
@@ -124,7 +132,7 @@ $$(z, 1, 0, -1) = (L(z), i, 1 + i, 1)$$
 
 由于分式线性变换把圆和直线映为圆或直线, 从而再考虑点 $z = i$, $L(i) = \frac{1 + i}{2} := w_4$, 发现 $w_1 = i, w_3 = 1$ 与 $w_4$ 三点共线($w_4$ 恰为 $w_1$ 与 $w_3$ 中点), 因此 $L$ 把单位圆周映为直线 $l_1 : x + y - 1 = 0$.
 
-由于分式线性变换在 $\overline {\mathbb C}$ 是解析的, 具有保向性, 从而只需要判断把单位圆盘内部映为直线上方或下方. 考虑 $L(0) = 1 + i$, 因此把单位圆盘映为 $x + y - 1 > 0$ 的区域.
+由于分式线性变换具有保向性, 从而只需要判断把单位圆盘内部映为直线上方或下方. 考虑 $L(0) = 1 + i$, 因此把单位圆盘映为 $x + y - 1 > 0$ 的区域.
 
 不妨设 $z = it, t \in \mathbb R$, 那么 $L(z) = \frac {1 + i}{1 + t} = \frac {1}{1 + t} + i \frac {1}{1 + t}$, 其满足 $\text{Im}(L(z)) = \text{Re}(L(z))$ , 从而 $L$ 把虚轴映为直线 $x - y = 0$.
 ///
@@ -315,7 +323,6 @@ $$g'(z) = \lim_{z_0 \to z} \frac {g(z) - g(z_0)}{z - z_0} = \lim_{z \to z_0} \fr
 
 ///details | 解答
     type : proof
-    open : True
 
 (1) 考虑
 
@@ -334,6 +341,15 @@ S_n = \sum_{k = 0}^n a_kz^k &= \frac{1}{2\pi i}\int_{|\zeta| = R}\sum_{k=0}^n \f
 \end{align*}
 
 带入即得.
+
+(2) 利用绝对值不等式
+
+\begin{align*}
+|f(z)-S_n(z)|&=\left|\frac{z^{n+1}}{2\pi i}\int_{|\zeta| + R}\frac{f(\zeta)}{\zeta^{n+1}(\zeta - z)} d\zeta\right|\\
+&\le \frac 1 {2\pi}\int_{|\zeta| = R} \left|\frac{f(\zeta)}{\zeta^{n+1}(\zeta = z)}\right| |d\zeta| \cdot |z|^{n+1}\\
+&\le \frac {1}{2\pi} \frac{\|f(\zeta)\|_\infty\cdot 2\pi R}{R^{n+1}(R-|z|)} |z|^{n+1}\\
+&= \frac{\max_{\zeta \in D}|f(\zeta)|}{R^n(R - |z|)}|z|^{n+1}.
+\end{align*}
 ///
 
 ---
@@ -348,8 +364,37 @@ S_n = \sum_{k = 0}^n a_kz^k &= \frac{1}{2\pi i}\int_{|\zeta| = R}\sum_{k=0}^n \f
 利用高阶导数的 Cauchy 不等式证明 $f$ 是次数不超过 $m$ 的多项式.
 ///
 
+///details | 解答
+    type : proof
+
+由 $f$ 是整函数, 在 $0$ 处进行幂级数展开, 其在 $\mathbb{C}$ 上收敛.
+
+\[f(z) = \sum_{n = 0}^\infty a_nz^n\]
+
+利用 Cauchy 不等式, 对任意的 $R > 0$, 对任意 $z \in D(0, R)$ 都有
+
+\[|a_n| \le \frac{\max_{D(0, R)}|f(z)|}{R^n} \le \frac{C(1 + |z|^m)}{R^n}\]
+
+对任意的 $n > m$, 固定 $n$, 令 $R \to \infty$, 得 $a_n \to 0$.
+
+也即 $f$ 是次数不超 $m$ 的多项式.
+///
+
 ### 第八题(12分)
 
 /// question
-设 $f = u + iv : \mathbb C \to \mathbb C$ 是解析函数, 证明在以下两种情形下的 $f$ 都一定是常数 
+设 $f = u + iv : \mathbb C \to \mathbb C$ 是解析函数, 证明在以下两种情形下的 $f$ 都一定是常数
+
+(1) $u = v^2$;  
+(2) $u^2 + v^2$ 为常数.
+///
+
+///details | 解答
+    type : proof
+
+如果存在 $z_0$ 使得 $f'(z_0) \ne 0$, 那么由 $f$ 的解析性和逆映射定理可知存在 $z_0$ 的邻域 $D$ 使得 $f(D)$ 是开集, 
+
+但是 $\mathbb R^2$ 中的集合 $S_1 = \{(u, v) :  u = v^2\}$ 和 $S_2 = \{(u, v) : u^2 + v^2 = C, C  \text{为常数}\}$ 都无内点, 矛盾!
+
+从而 $f$ 为常数.
 ///
